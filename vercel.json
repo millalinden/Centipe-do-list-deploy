@@ -2,7 +2,7 @@
   "rewrites": [
     {
       "source": "/v1/:match*",
-      "destination": "https://centipe-do-list-backend-kljdmvz4z-millas-projects-7027ee8d.vercel.app/v1/:match*"
+      "destination": "https://centipe-do-list-backend.vercel.app/v1/:match*"
     },
     {
       "source": "/",
