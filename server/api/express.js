@@ -99,8 +99,7 @@ app.use(passport.session());
 
 // Routes
 app.get("/", (_, res) => {
-  // res.end();
-  res.send('Hello, world!');
+  res.end();
 });
 
 app.post("/register", userHandlers.handleRegister);
