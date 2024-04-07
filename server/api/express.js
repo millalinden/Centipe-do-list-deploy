@@ -12,7 +12,7 @@ const session = require("express-session");
 const cors = require("cors");
 const passport = require("passport");
 
-// function setupRouting(app) {
+function setupRouting(app) {
   // APP USE
 
   app.use(
@@ -61,7 +61,7 @@ const passport = require("passport");
   app.delete("/task", isAuth, taskHandlers.handleDeleteTask);
 
   app.get("/tasks", isAuth, taskHandlers.handleGetTaskList);
-// }
+}
 
 // module.exports = { setupRouting };
 module.exports = app;
