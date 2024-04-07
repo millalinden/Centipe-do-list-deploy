@@ -1,5 +1,5 @@
 export async function validateSession(setStatus) {
-  const url = `${import.meta.env.VITE_SERVER_URL}/session`;
+  const url = "/v1/session";
   const res = await fetch(url, {
     method: "GET",
     withCredentials: true,

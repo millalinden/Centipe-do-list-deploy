@@ -102,22 +102,22 @@ app.get("/", (_, res) => {
   res.end();
 });
 
-app.post("/register", userHandlers.handleRegister);
+app.post("/v1/register", userHandlers.handleRegister);
 
-app.post("/login", passport.authenticate("local"), (_, res) => {
+app.post("/v1/login", passport.authenticate("local"), (_, res) => {
   res.end();
 });
 
-app.post("/logout", userHandlers.handleLogout);
+app.post("/v1/logout", userHandlers.handleLogout);
 
-app.get("/session", userHandlers.handleSession);
+app.get("/v1/session", userHandlers.handleSession);
 
-app.post("/task", taskHandlers.handlePostTask);
+app.post("/v1/task", taskHandlers.handlePostTask);
 
-app.put("/task", isAuth, taskHandlers.handlePutTask);
+app.put("/v1/task", isAuth, taskHandlers.handlePutTask);
 
-app.delete("/task", isAuth, taskHandlers.handleDeleteTask);
+app.delete("/v1/task", isAuth, taskHandlers.handleDeleteTask);
 
-app.get("/tasks", isAuth, taskHandlers.handleGetTaskList);
+app.get("/v1/tasks", isAuth, taskHandlers.handleGetTaskList);
 
 module.exports = app;

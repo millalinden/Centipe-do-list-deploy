@@ -1,0 +1,16 @@
+{
+  "rewrites": [
+    {
+      "source": "/v1/:match*",
+      "destination": "https://centipe-do-list-backend-kljdmvz4z-millas-projects-7027ee8d.vercel.app/v1/:match*"
+    },
+    {
+      "source": "/",
+      "destination": "https://centipe-do-list-frontend-76k6wzrm1-millas-projects-7027ee8d.vercel.app/"
+    },
+    {
+      "source": "/:match*",
+      "destination": "https://centipe-do-list-frontend-76k6wzrm1-millas-projects-7027ee8d.vercel.app/:match*"
+    }
+  ]
+}
