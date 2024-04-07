@@ -1,3 +1,9 @@
+// TEST
+const express = require('express');
+const app = express();
+
+
+
 const taskHandlers = require("./handlers/taskHandlers");
 const userHandlers = require("./handlers/userHandlers");
 const { isAuth } = require("./passport");
@@ -58,4 +64,5 @@ function setupRouting(app) {
   app.get("/tasks", isAuth, taskHandlers.handleGetTaskList);
 }
 
-module.exports = { setupRouting };
+// module.exports = { setupRouting };
+module.exports = app;
