@@ -80,7 +80,7 @@ const passport = require("passport");
 // Middleware setup
 app.use(
   cors({
-    origin: "http://localhost:5173",
+    origin: "https://centipe-do-list-frontend-76k6wzrm1-millas-projects-7027ee8d.vercel.app/",
     credentials: true,
   })
 );
