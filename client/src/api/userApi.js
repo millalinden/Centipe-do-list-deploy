@@ -36,15 +36,18 @@ export async function handleLogin(e, name, password, setStatus, navigate) {
   };
 
   try {
-    const response = await fetch("/v1/login", {
-      method: "POST",
-      withCredentials: true,
-      credentials: "include",
-      headers: {
-        "Content-Type": "application/json",
-      },
-      body: JSON.stringify(userData),
-    });
+    const response = await fetch(
+      "https://centipe-do-list-backend-kljdmvz4z-millas-projects-7027ee8d.vercel.app/v1/login",
+      {
+        method: "POST",
+        withCredentials: true,
+        credentials: "include",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(userData),
+      }
+    );
 
     setStatus(response.status);
 
@@ -63,7 +66,6 @@ export async function handleLogin(e, name, password, setStatus, navigate) {
     // Handle the error, e.g., display an error message
   }
 }
-
 
 export async function handleLogout(navigate) {
   const url = "/v1/logout";
@@ -103,16 +105,13 @@ export async function handleCreateUser(
   };
 
   try {
-    const response = await fetch(
-      "/v1/register",
-      {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify(userData),
-      }
-    );
+    const response = await fetch("/v1/register", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify(userData),
+    });
 
     if (response.status === 409) {
       setDisplayError("username taken");
