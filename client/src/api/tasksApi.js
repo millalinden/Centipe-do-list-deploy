@@ -1,5 +1,5 @@
 export async function getTasks(setTasks) {
-  const url = "https://centipe-do-list-backend-kljdmvz4z-millas-projects-7027ee8d.vercel.app/v1/tasks";
+  const url = "https://centipe-do-list-backend.vercel.app/v1/tasks";
   try {
     const res = await fetch(url, {
       method: "GET",
@@ -21,7 +21,7 @@ export async function getTasks(setTasks) {
 }
 
 export async function deleteTask(task_id, fetchTasks) {
-  const url = "https://centipe-do-list-backend-kljdmvz4z-millas-projects-7027ee8d.vercel.app/v1/task";
+  const url = "https://centipe-do-list-backend.vercel.app/v1/task";
   const task_id_json = { task_id: task_id };
   try {
     const res = await fetch(url, {
@@ -44,7 +44,7 @@ export async function deleteTask(task_id, fetchTasks) {
 }
 
 export async function editTask(task_id, fetchTasks, task) {
-  const url = "https://centipe-do-list-backend-kljdmvz4z-millas-projects-7027ee8d.vercel.app/v1/task";
+  const url = "https://centipe-do-list-backend.vercel.app/v1/task";
   try {
     const res = await fetch(url, {
       method: "PUT",
@@ -66,7 +66,7 @@ export async function editTask(task_id, fetchTasks, task) {
 }
 
 export async function addTask(task, fetchTasks) {
-  const url = "https://centipe-do-list-backend-kljdmvz4z-millas-projects-7027ee8d.vercel.app/v1/task";
+  const url = "https://centipe-do-list-backend.vercel.app/v1/task";
   try {
     const res = await fetch(url, {
       method: "POST",
