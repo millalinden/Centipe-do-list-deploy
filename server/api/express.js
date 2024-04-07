@@ -2,7 +2,6 @@
 // const express = require('express');
 // const app = express();
 
-
 // const taskHandlers = require("./handlers/taskHandlers");
 // const userHandlers = require("./handlers/userHandlers");
 // const { isAuth } = require("./passport");
@@ -66,7 +65,7 @@
 // // module.exports = { setupRouting };
 // module.exports = app;
 
-const express = require('express');
+const express = require("express");
 const app = express();
 
 const taskHandlers = require("./handlers/taskHandlers");
@@ -92,12 +91,13 @@ app.use(
     secret: "secret",
     resave: false,
     saveUninitialized: false,
-    sameSite: "lax",
+    // sameSite: "lax",
+    cookie: { secure: false, sameSite: "lax" },
   })
 );
 
 app.use(passport.initialize()); // Initialize Passport.js
-app.use(passport.session()); 
+app.use(passport.session());
 
 // Routes
 app.get("/", (_, res) => {
