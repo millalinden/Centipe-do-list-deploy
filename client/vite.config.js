@@ -6,7 +6,7 @@ export default defineConfig({
   plugins: [react()],
   server: {
     proxy: {
-      "^/v1/.*": "http://localhost:3000",
+      "^/v1/.*": "https://centipe-do-list-backend-kljdmvz4z-millas-projects-7027ee8d.vercel.app/",
     },
   },
 });
