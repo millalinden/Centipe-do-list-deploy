@@ -3,7 +3,6 @@ const express = require('express');
 const app = express();
 
 
-
 const taskHandlers = require("./handlers/taskHandlers");
 const userHandlers = require("./handlers/userHandlers");
 const { isAuth } = require("./passport");
@@ -13,7 +12,7 @@ const session = require("express-session");
 const cors = require("cors");
 const passport = require("passport");
 
-function setupRouting(app) {
+// function setupRouting(app) {
   // APP USE
 
   app.use(
@@ -62,7 +61,7 @@ function setupRouting(app) {
   app.delete("/task", isAuth, taskHandlers.handleDeleteTask);
 
   app.get("/tasks", isAuth, taskHandlers.handleGetTaskList);
-}
+// }
 
 // module.exports = { setupRouting };
 module.exports = app;
