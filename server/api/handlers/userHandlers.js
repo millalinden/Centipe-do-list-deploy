@@ -50,6 +50,7 @@ function handleSession(req, res) {
   } else {
     res.status(401).json({ status: 401, username: null }); // Return status and null username
   }
+  res.setHeader('Content-Type', 'application/json');
 }
 
 module.exports = {
