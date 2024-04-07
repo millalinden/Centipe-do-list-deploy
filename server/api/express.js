@@ -78,7 +78,6 @@ const session = require("express-session");
 const cors = require("cors");
 const passport = require("passport");
 
-app.use(passport.session());
 // Middleware setup
 app.use(
   cors({
@@ -96,6 +95,9 @@ app.use(
     sameSite: "lax",
   })
 );
+
+app.use(passport.initialize()); // Initialize Passport.js
+app.use(passport.session()); 
 
 // Routes
 app.get("/", (_, res) => {
