@@ -12,7 +12,7 @@ function setupRouting(app) {
 
   app.use(
     cors({
-      origin: process.env.ORIGINURL,
+      origin: "http://localhost:5173",
       credentials: true,
     })
   );
@@ -22,7 +22,7 @@ function setupRouting(app) {
 
   app.use(
     session({
-      secret: process.env.SESSION_SECRET,
+      secret: "secret",
       resave: false,
       saveUninitialized: false,
       sameSite: "lax",
