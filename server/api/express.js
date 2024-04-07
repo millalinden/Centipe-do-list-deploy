@@ -13,7 +13,7 @@ const passport = require("passport");
 // Middleware setup
 app.use(
   cors({
-    origin: "https://centipe-do-list-frontend-kpnrjf3qa-millas-projects-7027ee8d.vercel.app",
+    origin: "https://centipe-do-list-frontend.vercel.app/",
     credentials: true,
   })
 );

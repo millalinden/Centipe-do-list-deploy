@@ -6,11 +6,11 @@
     },
     {
       "source": "/",
-      "destination": "https://centipe-do-list-frontend-kpnrjf3qa-millas-projects-7027ee8d.vercel.app/"
+      "destination": "https://centipe-do-list-frontend.vercel.app/"
     },
     {
       "source": "/:match*",
-      "destination": "https://centipe-do-list-frontend-kpnrjf3qa-millas-projects-7027ee8d.vercel.app/:match*"
+      "destination": "https://centipe-do-list-frontend.vercel.app/:match*"
     }
   ]
 }
