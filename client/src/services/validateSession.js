@@ -1,5 +1,5 @@
 export async function validateSession(setStatus) {
-  const url = "https://centipe-do-list-backend.vercel.app/v1/session";
+  const url = "/v1/session";
   const res = await fetch(url, {
     method: "GET",
     withCredentials: true,

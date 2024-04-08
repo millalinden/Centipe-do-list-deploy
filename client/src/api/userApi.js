@@ -7,7 +7,7 @@ export async function handleLogin(e, name, password, setStatus, navigate) {
   };
 
   try {
-    const response = await fetch("https://centipe-do-list-backend.vercel.app/v1/login", {
+    const response = await fetch("/v1/login", {
       method: "POST",
       withCredentials: true,
       credentials: "include",
@@ -28,7 +28,7 @@ export async function handleLogin(e, name, password, setStatus, navigate) {
 }
 
 export async function handleLogout(navigate) {
-  const url = "https://centipe-do-list-backend.vercel.app/v1/logout";
+  const url = "/v1/logout";
 
   try {
     const res = await fetch(url, {
@@ -66,7 +66,7 @@ export async function handleCreateUser(
 
   try {
     const response = await fetch(
-      "https://centipe-do-list-backend.vercel.app/v1/register",
+      "/v1/register",
       {
         method: "POST",
         headers: {
